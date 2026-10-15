@@ -1,0 +1,11 @@
+package com.scsvmv.util;
+public class MathUtil {
+public static int square(int n) { return n * n; }
+public static int cube(int n) { return n * n * n; }
+}
+output:
+NAME DAYS BILL
+Aravind      28  2380.00
+Divya        30  2550.00
+Karthik      25  2125.00
+Total collection = Rs. 7055.00

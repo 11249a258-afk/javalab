@@ -1,0 +1,50 @@
+class Student {
+    int roll;
+    String name;
+    int marks;
+    int days;
+
+    void set(int r, String n, int m, int d) {
+        roll = r;
+        name = n;
+        marks = m;
+        days = d;
+    }
+
+    void show() {
+        double rebate = 0;
+
+        if (days < 26) {
+            rebate = marks * 0.10;
+        }
+
+        double finalMarks = marks - rebate;
+
+        System.out.println(roll + " " + name + " " + marks
+                + " " + rebate + " " + finalMarks);
+    }
+}
+
+public class StudentDemo {
+    public static void main(String[] args) {
+        Student s1 = new Student();
+        Student s2 = new Student();
+
+        s1.set(101, "Aravind", 78, 20);
+        s2.set(102, "Divya", 91, 28);
+
+        System.out.println("ROLL NAME MARKS REBATE FINAL");
+        s1.show();
+        s2.show();
+    }
+}
+Sample output
+text
+ROLL NAME MARKS REBATE FINAL
+101 Aravind 78 7.8 70.2
+102 Divya 91 0.0 91.0
+
+output:
+ROLL NAME MARKS
+101 Aravind 78
+102 Divya 91
